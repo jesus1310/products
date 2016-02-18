@@ -48,7 +48,7 @@ public class StockManager
     {
         Product encontrado = null;
         int indice = 0;
-        while (encontrado == null){
+        while (encontrado == null && indice < stock.size()){
             if (id == stock.get(indice).getID()){
                 encontrado = stock.get(indice);
             }
@@ -66,7 +66,11 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        return 0;
+        int cantidad = 0;
+        if (findProduct(id) != null){
+            cantidad = cantidad + 1;
+        }
+        return cantidad;
     }
 
     /**
