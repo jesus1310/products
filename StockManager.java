@@ -88,4 +88,15 @@ public class StockManager
             System.out.println(producto);
         }
     }
+
+    /**
+     * Método que imprime los detalles de todos los productos que tienen un stock por debajo del parámetro indicado
+     */
+    public void underGivenNumberInStock(int numeroStock){
+        for (Product producto : stock){
+            if (producto.getQuantity() < numeroStock){
+                System.out.println(producto);
+            }
+        }
+    }
 }
